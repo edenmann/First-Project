@@ -1,5 +1,5 @@
 class Character:
-    def __init__(self, name, health):
+    def __init__(self, name, health, intelligence, score):
         self.name = name
         self.health = health
         self.recieved = False
