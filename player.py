@@ -1,7 +1,8 @@
 class Player:
-    def __init__(self, name, health):
+    def __init__(self, name, health, score):
         self.name = name
         self.health = health
+        self.score = score
         self.inventory = []
 
     def pick_up_item(self, item):
