@@ -7,7 +7,7 @@ class Event:
         self.length = length
         self.description = description
 
-snake = Event("Snake", 1, , "Out of corner of your eye you see something on the ground move suddenly. You stop notice that it is a plant. It is a a small plant, about 2 inches tall with multiple branching leaves. It sways from side to side as if something ")
+#snake = Event("Snake", 1, health-=10, "Out of corner of your eye you see something on the ground move suddenly. You stop and notice that it is a plant. Upon closer inspection you see that it is not actually a plant but a snake!")
 
 # Object for places
 
@@ -27,12 +27,14 @@ snake = Event("Snake", 1, , "Out of corner of your eye you see something on the 
 #  +---+---+---+---+---+
 
 
-
-
-class Path:
+class Place:
     def __init__(self, name, description):
         self.name = name
         self.description = description
 
+
+
 events = []
 paths = []
+
+def status():
