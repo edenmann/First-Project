@@ -1,13 +1,23 @@
 
 # Object for things that happen in the game
-# name is what the event is, length is whether it lasts for 1 or more turns (from 1 to anything more), effect is how it affects the player (damages the player, initiates battle), description is the text describing the event
+# name is what the event is, length is how many turns it lasts (1 and on), effect is how it affects the player (damages the player, initiates battle), description is the text describing the event
 class Event:
     def __init__(self, name, length, effect, description):
         self.name = name
         self.length = length
+        self.effect = effect
         self.description = description
 
-#snake = Event("Snake", 1, health-=10, "Out of corner of your eye you see something on the ground move suddenly. You stop and notice that it is a plant. Upon closer inspection you see that it is not actually a plant but a snake!")
+# Effects: poison (10 damage per turn), 
+    effects = {
+        "poison": 10,
+    }
+    def activate(self):
+        print(self.description)
+        
+        
+
+snake = Event("Snake", 10, "poison", "Out of corner of your eye you see something on the ground move suddenly. You stop and notice that it is a plant. Upon closer inspection you see that it is not actually a plant but a snake! Quickly, before you can react, the snake slithers up to you and bites your ankle.")
 
 # Object for places
 

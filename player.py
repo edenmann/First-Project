@@ -13,3 +13,12 @@ class Player:
         if item in self.inventory:
             character.inventory.append(item)
             self.inventory.remove(item)
+
+# cause is what did the damage. damage is how much damage was done.
+def take_damage(cause, damage):
+    print("You took", damage, "damage from", cause, ".")
+    player.health -= damage
+    if player.health <= 0:
+        print("You died.")
+    else:
+        print("You have", player.health, "health left.")
