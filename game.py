@@ -47,4 +47,4 @@ class Place:
 events = []
 paths = []
 
-def status():
+# def status():
