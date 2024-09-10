@@ -37,7 +37,7 @@ snake = Event("Snake", 10, "poison", "Out of corner of your eye you see somethin
 #  +---+---+---+---+---+
 
 
-class Place:
+class Scene:
     def __init__(self, name, description):
         self.name = name
         self.description = description
@@ -48,3 +48,15 @@ events = []
 paths = []
 
 # def status():
+
+# format: dialogue("Hello", "Greetings")
+def dialogue(optionA, optionB):
+    print("What do you say?")
+    print("A. " + optionA)
+    print("B. " + optionB)
+    choice = input("Type 'A' or 'B' ")
+    if choice == "A":
+        print("You say:" )
+        return optionA
+    elif choice == "B":
+        return optionB

@@ -21,3 +21,4 @@ def take_damage(cause, damage):
         print("You died.")
     else:
         print("You have", player.health, "health left.")
+

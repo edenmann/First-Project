@@ -4,7 +4,8 @@ from item import Item
 from character import Character
 from wordle import playGame
 from game import Event
-from game import Place
+from game import Scene
+from game import dialogue
 import random
 
 # Goal: interact with friendly character then fight evil character and beat game
@@ -26,14 +27,25 @@ def player_choice(options):
 print("You wake in a forest. It is around mid-day. You stand up and look around.")
 print("You wince in pain! You are starving! You must find food quickly or you will die!")
 
+
 print("Surrounding you there are a few things of note. There is a dirt pathway to your front and a waterfall behind you.")
-choice = input("What do you do? Choices available: pathway, waterfall.")
+choice = player_choice("pathway, waterfall")
 if choice == "pathway":
     print("You choose to walk down the pathway. The atmosphere in the forest is quite nice. ")
     print("As you walk along the path, you come across a small house. Inside the house, you hear a guitar being played.") 
     print("The melody being played reminds you of your past.")
-    print("You are without food or weapons and danger is approaching. Do you choose to ask this person for supplies or continue down the path?")
-    player_choice("pathway, supplies")
-    if choice == "pathway":
+    print("You are without food or weapons. Do you choose to ask this person for supplies or continue down the path?")
+    choice = player_choice("supplies, pathway")
+
+    if choice == "supplies":
+        print("You knock on the door and the guitar immediately stops. You hear quick footsteps as the person approaches the door.")
+        print("The door opens and you see a small, old man.")
+        print("He stares at you, as though he is waiting for you to speak.")
+
+        dialogue("Hello sir, I am very hungry. Do you have any food that I could eat?", "Hi, can I have food?")
+        
+
+    elif choice == "pathway":
         print("You continue down the path, beliveing that other oppurtunities will present themselves.")
-        print("A nearby river which the path has loosely been following, eventually widens into a lake. ")
+        print("A nearby river which the path has loosely been following, eventually widens into a lake.")
+        print("")

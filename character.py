@@ -15,6 +15,7 @@ class Character:
                 print(f"{self.name} says: I see. Keep looking for a star.")
         else:
             print(f"{self.name} says: I already have what I need. Go away!")
+            
     def receive_item(self, item):
         self.received = True
         self.inventory.append(item)
