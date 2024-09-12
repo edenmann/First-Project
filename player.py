@@ -17,8 +17,8 @@ class Player:
 def take_damage(cause, damage):
     print("You took", damage, "damage from", cause, ".")
     player.health -= damage
-    if player.health <= 0:
+    if Player.health <= 0:
         print("You died.")
     else:
-        print("You have", player.health, "health left.")
+        print("You have", Player.health, "health left.")
 

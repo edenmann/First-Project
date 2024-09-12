@@ -50,13 +50,14 @@ paths = []
 # def status():
 
 # format: dialogue("Hello", "Greetings")
-def dialogue(optionA, optionB):
+def dialogue(optionA, responseA, optionB, responseB):
     print("What do you say?")
     print("A. " + optionA)
     print("B. " + optionB)
     choice = input("Type 'A' or 'B' ")
     if choice == "A":
-        print("You say:" )
-        return optionA
+        print("You say:" + optionA)
+        print(responseA)
     elif choice == "B":
-        return optionB
+        print("You say:" + optionB)
+        print(responseB)

@@ -13,6 +13,7 @@ import random
 print("Welcome to my game.")
 player_name = input("What is your name? ")
 player = Player(player_name, 100)
+print("")
 
 print("In this game, you will be presented with multiple choices. They will be listed like this: itemA, itemB. To select an option, type it out.")
 print("For example, to select itemA, type 'itemA'.")
@@ -20,7 +21,10 @@ print("")
 
 # format: player_choice("option1, option2")
 def player_choice(options):
-    choice = input("What do you do? Choices available: " + options + ".")
+    print("")
+    print("What do you do? Choices available: " + options + ".")
+    choice = input(" > ")
+    print("")
     return choice
 
 # Start of game and first choice.
@@ -42,10 +46,13 @@ if choice == "pathway":
         print("The door opens and you see a small, old man.")
         print("He stares at you, as though he is waiting for you to speak.")
 
-        dialogue("Hello sir, I am very hungry. Do you have any food that I could eat?", "Hi, can I have food?")
+        dialogue("Hello sir, I am very hungry. Do you have any food that I could eat?", "Alright, I guess that I could spare some food. Give me one moment", "Hi, can I have food?", "okay (:")
         
 
     elif choice == "pathway":
         print("You continue down the path, beliveing that other oppurtunities will present themselves.")
         print("A nearby river which the path has loosely been following, eventually widens into a lake.")
-        print("")
+        print("Your hunger becomes too much to bear.")
+
+        take_damage("hunger", 100)
+
