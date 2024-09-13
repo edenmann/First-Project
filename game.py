@@ -38,11 +38,10 @@ snake = Event("Snake", 10, "poison", "Out of corner of your eye you see somethin
 
 
 class Scene:
-    def __init__(self, name, description):
+    def __init__(self, name, paths):
         self.name = name
         self.description = description
-
-
+        self.paths = paths
 
 events = []
 paths = []
